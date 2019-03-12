@@ -1,9 +1,0 @@
-idor de Jupyter totalmente funcional ingresando desde el navegador de su equipo en la dirección ```http://localhost:8999``` con la contraseña ```Jupyter```.
-
-## Clonación del repositorio.
-
-Para clonar el repositorio en su sitema de archivos local, ejecute desde una terminal:
-
-``` bash
-git clone https://github.com/Cloudevel/cd101.git
-```
