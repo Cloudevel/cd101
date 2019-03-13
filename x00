@@ -1,0 +1,8 @@
+
+# cd101 "Introducción a Linux para Virtualización y DevOps".
+
+Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso cd101 "Introducción a Linux para Virtualización y DevOps", de Cloudevel®. 
+
+Las notebooks se deben de ejecutar utilizando el [kernel de Bash](https://github.com/takluyver/bash_kernel).
+
+## Nuestra máquina virtua

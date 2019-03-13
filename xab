@@ -1,11 +1,3 @@
-# ¡En construcción!
-# cd 101
-
-
-# cd101 "Introducción a GNU/Linux para entornos virtuales".
-
-Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso cd101 "Introducción a GNU/Linux para entornos virtuales", de Cloudevel®. 
-
 Las notebooks se deben de ejecutar utilizando el [kernel de Bash](https://github.com/takluyver/bash_kernel).
 
 ## Nuestra máquina virtual.
