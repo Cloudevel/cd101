@@ -1,1 +1,0 @@
-27 16 * * * echo "Saludos" >> ~/saludos.txt
