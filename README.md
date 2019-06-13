@@ -10,10 +10,6 @@ El código de estas notebooks fue escrito para ser ejecutado en una VM de [Virtu
 
 Una vez que se ejecute la VM podrá acceder a un servidor de Jupyter totalmente funcional ingresando desde el navegador de su equipo en la dirección ```http://localhost:8999``` con la contraseña ```Jupyter```.
 
-**Advertencia:**
-
-Si decide ejecutar el código contenido en las celdas de estas notebooks en un entorno distinto al de la VM que porporcionamos es muy posible que no funcione.
-
 
 ## El kernel de Bash para Jupyter.
 
