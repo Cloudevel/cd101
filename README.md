@@ -1,12 +1,12 @@
 
-# cd101 "Introducción a GNU/Linux para Virtualización y DevOps".
+# cd101 "Introducción a GNU/Linux desde la línea de comandos".
 
 
-Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso cd101 "Introducción a Linux para Virtualización y DevOps" de [Cloudevel®](https://cloudevel.com). 
+Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso cd101 "Introducción a GNU/Linux desde la línea de comandos" de [Cloudevel®](https://cloudevel.com). 
 
 ## Nuestra máquina virtual.
 
-El código de estas notebooks fue escrito para ser ejecutado en una VM de [Virtualbox](https://virtualbox.org) que hemos diseñado como plataforma del curso, la cual puede ser descargada desde https://cloudevel.com/downloads/base/view. 
+El código de estas notebooks fue escrito para ser ejecutado en una VM de [Virtualbox](https://virtualbox.org) que hemos diseñado como plataforma del curso, la cual puede ser descargada desde https://cloudevel.com/descargas. 
 
 Una vez que se ejecute la VM podrá acceder a un servidor de Jupyter totalmente funcional ingresando desde el navegador de su equipo en la dirección ```http://localhost:8999``` con la contraseña ```Jupyter```.
 
