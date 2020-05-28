@@ -1,6 +1,0 @@
-tualbox.org) que hemos diseñado como plataforma del curso, la cual puede ser descargada desde https://cloudevel.com/downloads/base/view. 
-
-Una vez que se ejecute la VM podrá acceder a un servidor de Jupyter totalmente funcional ingresando desde el navegador de su equipo en la dirección ```http://localhost:8999``` con la contraseña ```Jupyter```.
-
-
-## El kernel de Bash para 
