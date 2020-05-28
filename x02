@@ -1,0 +1,14 @@
+Jupyter.
+
+Las notebooks se deben de ejecutar utilizando el [kernel de Bash](https://github.com/takluyver/bash_kernel).
+
+
+## Clonación del repositorio.
+
+Para clonar el repositorio en su sistema de archivos local, ejecute desde una terminal:
+
+``` bash
+git clone https://github.com/Cloudevel/cd101.git
+```
+
+Las notebooks son liberadas bajo los términos de la [Licencia MIT](LICENSE).
