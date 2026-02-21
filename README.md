@@ -36,6 +36,25 @@ Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso c
 | [27](27_fechas_horas_y_temporizadores.ipynb) | Fechas, horas y temporizadores |
 | [28](28_seguridad_basica.ipynb) | Seguridad básica |
 
+## Entornos de ejecución.
+
+### Entorno del alumno (recomendado).
+
+Para ejecutar la totalidad del curso se requiere una máquina virtual con una distribución basada en *Debian*, preferentemente **Ubuntu 24.04 LTS**. Algunas notebooks requieren acceso real al kernel, al proceso de arranque, a dispositivos de bloque y a *systemd*, lo cual no es posible en un contenedor estándar.
+
+| Notebooks | Requieren VM | Razón |
+|-----------|:---:|-------|
+| 17 — proceso de arranque | SI | GRUB e initramfs reales |
+| 18 — kernel y módulos | SI | Acceso a módulos del kernel del sistema |
+| 19 — volúmenes y particiones | SI | fdisk/lsblk sobre discos reales |
+| 20 — systemd | SI | systemd como PID 1 |
+| 28 — ufw | SI | Requiere CAP_NET_ADMIN |
+| Resto de notebooks | no | Compatibles con contenedor |
+
+### Entorno de mantenimiento (devcontainer).
+
+Para editar y mantener el material del curso existe una configuración de [Dev Container](https://containers.dev/) en `.devcontainer/`. Incluye Jupyter con el kernel de Bash y todas las herramientas de los notebooks compatibles con contenedor. Puede usarse con **VSCode** o con **GitHub Codespaces**.
+
 ## El kernel de Bash para Jupyter.
 
 Las notebooks se ejecutan utilizando el [kernel de Bash](https://github.com/takluyver/bash_kernel).

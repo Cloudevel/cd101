@@ -1,0 +1,27 @@
+{
+    "name": "cd101 — mantenimiento",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers"
+            ],
+            "settings": {
+                "jupyter.defaultKernel": "bash"
+            }
+        }
+    },
+    "forwardPorts": [8888],
+    "portsAttributes": {
+        "8888": {
+            "label": "JupyterLab",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    "postCreateCommand": "jupyter lab --ip=0.0.0.0 --no-browser --allow-root &",
+    "remoteUser": "root"
+}
