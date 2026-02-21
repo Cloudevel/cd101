@@ -18,21 +18,22 @@ Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso c
 | [09](09_usuarios_y_grupos.ipynb) | Usuarios y grupos |
 | [10](10_permisos_y_propietarios_de_archivos.ipynb) | Permisos y propietarios de archivos |
 | [11](11_procesos_trabajos_y_daemons.ipynb) | Procesos, trabajos y daemons |
-| [12](12_find_y_xargs.ipynb) | Los comandos find y xargs |
-| [13](13_introduccion_a_bash_scripting.ipynb) | Introducción a Bash scripting |
-| [14](14_entorno_del_shell.ipynb) | Entorno del shell con Bash |
-| [15](15_proceso_de_arranque.ipynb) | El proceso de arranque del sistema |
-| [16](16_kernel_modulos_y_dispositivos.ipynb) | El kernel de Linux, módulos y dispositivos |
-| [17](17_volumenes_y_particiones.ipynb) | Volúmenes y particiones |
-| [18](18_gestion_de_servicios_con_systemd.ipynb) | Gestión de servicios con systemd |
-| [19](19_chroot_y_contenedores.ipynb) | chroot y contenedores |
-| [20](20_introduccion_a_redes.ipynb) | Introducción a redes |
-| [21](21_sesiones_remotas_y_transmision_de_datos.ipynb) | Sesiones remotas y transmisión de datos |
-| [22](22_virtualizacion.ipynb) | Virtualización |
-| [23](23_compresion_de_archivos.ipynb) | Compresión de archivos |
-| [24](24_distribucion_de_software.ipynb) | Distribución de software |
-| [25](25_fechas_horas_y_temporizadores.ipynb) | Fechas, horas y temporizadores |
-| [26](26_seguridad_basica.ipynb) | Seguridad básica |
+| [12](12_diagnostico_y_monitoreo.ipynb) | Diagnóstico y monitoreo del sistema |
+| [13](13_find_y_xargs.ipynb) | Los comandos find y xargs |
+| [14](14_introduccion_a_bash_scripting.ipynb) | Introducción a Bash scripting |
+| [15](15_entorno_del_shell.ipynb) | Entorno del shell con Bash |
+| [16](16_proceso_de_arranque.ipynb) | El proceso de arranque del sistema |
+| [17](17_kernel_modulos_y_dispositivos.ipynb) | El kernel de Linux, módulos y dispositivos |
+| [18](18_volumenes_y_particiones.ipynb) | Volúmenes y particiones |
+| [19](19_gestion_de_servicios_con_systemd.ipynb) | Gestión de servicios con systemd |
+| [20](20_chroot_y_contenedores.ipynb) | chroot y contenedores |
+| [21](21_introduccion_a_redes.ipynb) | Introducción a redes |
+| [22](22_sesiones_remotas_y_transmision_de_datos.ipynb) | Sesiones remotas y transmisión de datos |
+| [23](23_virtualizacion.ipynb) | Virtualización |
+| [24](24_compresion_de_archivos.ipynb) | Compresión de archivos |
+| [25](25_distribucion_de_software.ipynb) | Distribución de software |
+| [26](26_fechas_horas_y_temporizadores.ipynb) | Fechas, horas y temporizadores |
+| [27](27_seguridad_basica.ipynb) | Seguridad básica |
 
 ## El kernel de Bash para Jupyter.
 
