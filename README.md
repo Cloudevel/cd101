@@ -15,25 +15,26 @@ Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso c
 | [06](06_flujos_de_texto_filtros_y_pipes.ipynb) | Flujos de texto, filtros y pipes |
 | [07](07_expresiones_regulares_y_grep.ipynb) | Expresiones regulares y grep |
 | [08](08_introduccion_a_vim.ipynb) | Los editores vim y sed |
-| [09](09_usuarios_y_grupos.ipynb) | Usuarios y grupos |
-| [10](10_permisos_y_propietarios_de_archivos.ipynb) | Permisos y propietarios de archivos |
-| [11](11_procesos_trabajos_y_daemons.ipynb) | Procesos, trabajos y daemons |
-| [12](12_diagnostico_y_monitoreo.ipynb) | Diagnóstico y monitoreo del sistema |
-| [13](13_find_y_xargs.ipynb) | Los comandos find y xargs |
-| [14](14_introduccion_a_bash_scripting.ipynb) | Introducción a Bash scripting |
-| [15](15_entorno_del_shell.ipynb) | Entorno del shell con Bash |
-| [16](16_proceso_de_arranque.ipynb) | El proceso de arranque del sistema |
-| [17](17_kernel_modulos_y_dispositivos.ipynb) | El kernel de Linux, módulos y dispositivos |
-| [18](18_volumenes_y_particiones.ipynb) | Volúmenes y particiones |
-| [19](19_gestion_de_servicios_con_systemd.ipynb) | Gestión de servicios con systemd |
-| [20](20_chroot_y_contenedores.ipynb) | chroot y contenedores |
-| [21](21_introduccion_a_redes.ipynb) | Introducción a redes |
-| [22](22_sesiones_remotas_y_transmision_de_datos.ipynb) | Sesiones remotas y transmisión de datos |
-| [23](23_virtualizacion.ipynb) | Virtualización |
-| [24](24_compresion_de_archivos.ipynb) | Compresión de archivos |
-| [25](25_distribucion_de_software.ipynb) | Distribución de software |
-| [26](26_fechas_horas_y_temporizadores.ipynb) | Fechas, horas y temporizadores |
-| [27](27_seguridad_basica.ipynb) | Seguridad básica |
+| [09](09_gawk.ipynb) | El procesador de texto gawk |
+| [10](10_usuarios_y_grupos.ipynb) | Usuarios y grupos |
+| [11](11_permisos_y_propietarios_de_archivos.ipynb) | Permisos y propietarios de archivos |
+| [12](12_procesos_trabajos_y_daemons.ipynb) | Procesos, trabajos y daemons |
+| [13](13_diagnostico_y_monitoreo.ipynb) | Diagnóstico y monitoreo del sistema |
+| [14](14_find_y_xargs.ipynb) | Los comandos find y xargs |
+| [15](15_introduccion_a_bash_scripting.ipynb) | Introducción a Bash scripting |
+| [16](16_entorno_del_shell.ipynb) | Entorno del shell con Bash |
+| [17](17_proceso_de_arranque.ipynb) | El proceso de arranque del sistema |
+| [18](18_kernel_modulos_y_dispositivos.ipynb) | El kernel de Linux, módulos y dispositivos |
+| [19](19_volumenes_y_particiones.ipynb) | Volúmenes y particiones |
+| [20](20_gestion_de_servicios_con_systemd.ipynb) | Gestión de servicios con systemd |
+| [21](21_chroot_y_contenedores.ipynb) | chroot y contenedores |
+| [22](22_introduccion_a_redes.ipynb) | Introducción a redes |
+| [23](23_sesiones_remotas_y_transmision_de_datos.ipynb) | Sesiones remotas y transmisión de datos |
+| [24](24_virtualizacion.ipynb) | Virtualización |
+| [25](25_compresion_de_archivos.ipynb) | Compresión de archivos |
+| [26](26_distribucion_de_software.ipynb) | Distribución de software |
+| [27](27_fechas_horas_y_temporizadores.ipynb) | Fechas, horas y temporizadores |
+| [28](28_seguridad_basica.ipynb) | Seguridad básica |
 
 ## El kernel de Bash para Jupyter.
 
