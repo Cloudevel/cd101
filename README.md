@@ -14,7 +14,7 @@ Notebooks de [Jupyter](https://jupyter.org) que incluyen los apuntes del curso c
 | [05](05_jerarquía_de_directorios.ipynb) | Jerarquía de directorios |
 | [06](06_flujos_de_texto_filtros_y_pipes.ipynb) | Flujos de texto, filtros y pipes |
 | [07](07_expresiones_regulares_y_grep.ipynb) | Expresiones regulares y grep |
-| [08](08_introduccion_a_vim.ipynb) | Introducción a vim |
+| [08](08_introduccion_a_vim.ipynb) | Los editores vim y sed |
 | [09](09_usuarios_y_grupos.ipynb) | Usuarios y grupos |
 | [10](10_permisos_y_propietarios_de_archivos.ipynb) | Permisos y propietarios de archivos |
 | [11](11_procesos_trabajos_y_daemons.ipynb) | Procesos, trabajos y daemons |
