@@ -1,7 +1,10 @@
 {
-    "name": "cd101 — mantenimiento",
+    "name": "cd101 — Ubuntu 24.04",
     "build": {
         "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
     "customizations": {
         "vscode": {
@@ -19,9 +22,9 @@
     "portsAttributes": {
         "8888": {
             "label": "JupyterLab",
-            "onAutoForward": "openBrowser"
+            "onAutoForward": "notify"
         }
     },
-    "postCreateCommand": "jupyter lab --ip=0.0.0.0 --no-browser --allow-root &",
-    "remoteUser": "root"
+    "postCreateCommand": "python3 -m bash_kernel.install --user",
+    "remoteUser": "vscode"
 }
