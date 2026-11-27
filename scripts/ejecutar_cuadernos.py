@@ -12,6 +12,9 @@ Uso:
 - Las celdas con la etiqueta ``skip-execution`` no se ejecutan (por ejemplo,
   editores interactivos). Las celdas con la etiqueta ``raises-exception``
   pueden terminar en error sin que el cuaderno falle (lo admite nbclient).
+- En los cuadernos con kernel de Python, cada línea ``!comando`` se comprueba
+  con ``_exit_code``: un comando del sistema que termina con error hace fallar
+  la celda (IPython, por sí solo, no lo considera un error).
 - Ningún cuaderno se guarda: las salidas solo se usan para el resumen.
 - Los cuadernos se ejecutan en una copia temporal del repositorio, para que los
   archivos de práctica que crean no ensucien el árbol de trabajo.
@@ -31,6 +34,7 @@ import nbformat
 from nbclient import NotebookClient
 
 ETIQUETA_OMITIR = "skip-execution"
+COMPROBACION = "if _exit_code != 0: raise RuntimeError(f'El comando terminó con código {_exit_code}')"
 
 
 def leer_omitidos(ruta: str | None) -> dict[str, str]:
@@ -47,12 +51,32 @@ def leer_omitidos(ruta: str | None) -> dict[str, str]:
     return omitidos
 
 
+def verificar_comandos(celda) -> None:
+    """Añade, tras cada línea ``!comando``, una comprobación de su código de salida."""
+    if "raises-exception" in celda.get("metadata", {}).get("tags", []):
+        return
+    nuevas = []
+    sangria = None  # sangría del comando ! en curso (puede seguir en varias líneas con \\)
+    for linea in celda.source.splitlines():
+        nuevas.append(linea)
+        if sangria is None and linea.lstrip().startswith("!"):
+            sangria = linea[: len(linea) - len(linea.lstrip())]
+        if sangria is not None and not linea.rstrip().endswith("\\"):
+            nuevas.append(f"{sangria}{COMPROBACION}")
+            sangria = None
+    celda.source = "\n".join(nuevas)
+
+
 def ejecutar(ruta: str, timeout: int) -> tuple[bool, str, int]:
     nb = nbformat.read(ruta, as_version=4)
     antes = len(nb.cells)
     nb.cells = [c for c in nb.cells if ETIQUETA_OMITIR not in c.get("metadata", {}).get("tags", [])]
     celdas_omitidas = antes - len(nb.cells)
     kernel = nb.metadata.get("kernelspec", {}).get("name", "python3")
+    if nb.metadata.get("kernelspec", {}).get("language", "python") == "python":
+        for celda in nb.cells:
+            if celda.cell_type == "code":
+                verificar_comandos(celda)
     cliente = NotebookClient(
         nb,
         timeout=timeout,
