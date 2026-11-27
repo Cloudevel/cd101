@@ -1,0 +1,9 @@
+# Jupyter y kernel de Bash del devcontainer de cd101 (versiones fijadas).
+# Dependabot propone las actualizaciones; nada cambia sin revisión.
+jupyter==1.1.1
+jupyterlab==4.6.6
+bash_kernel==0.10.0
+ipykernel==7.4.0
+# Ejecución de los cuadernos en la CI
+nbformat==5.11.1
+nbclient==0.11.0

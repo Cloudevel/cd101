@@ -41,7 +41,36 @@ Curso de **24 horas**. Esa duración es una excepción justificada del catálogo
 
 ## Entorno de ejecución.
 
-El entorno principal de este curso es **Ubuntu 24.04 en GitHub Codespaces**. En `.devcontainer/` hay una configuración de [Dev Container](https://containers.dev/) basada en *Ubuntu 24.04*, con *Jupyter* y el *kernel* de *Bash*; también puede abrirse con *Visual Studio Code*.
+El entorno principal de este curso es **Ubuntu 24.04 en GitHub Codespaces**. En `.devcontainer/` hay una configuración de [Dev Container](https://containers.dev/) basada en *Ubuntu 24.04*, con *Jupyter* y el *kernel* de *Bash*; también puede abrirse con *Visual Studio Code* y *Docker* en un equipo propio.
+
+* La imagen base, la *feature* de *Docker-in-Docker* y los paquetes de *Python* (`.devcontainer/requirements.txt`) están fijados por versión, para que todos los estudiantes trabajen con el mismo entorno.
+* *Docker-in-Docker* ejecuta un demonio de *Docker* dentro del contenedor del curso, en modo privilegiado. Lo usa el cuaderno 26, que practica los paquetes *RPM* en un contenedor de *Rocky Linux*.
+* No hace falta instalar nada más ni iniciar un servidor de *Jupyter* aparte: el *Codespace* abre los cuadernos directamente.
+
+### Ejercicios que requieren un Ubuntu 24.04 completo.
+
+Un contenedor no arranca con *systemd* como proceso 1 ni tiene acceso a discos, al cargador de arranque ni a los servicios del sistema. Por eso, los ejercicios de los siguientes cuadernos se practican en una máquina *Ubuntu* 24.04 completa (física, virtual o en la nube), y no en *GitHub Codespaces*:
+
+| Cuaderno | Motivo |
+|----------|--------|
+| [17](17_proceso_de_arranque.ipynb) | *GRUB*, `/boot`, `systemctl get-default` y `journalctl -b` |
+| [18](18_kernel_modulos_y_dispositivos.ipynb) | `vmlinuz` e `initrd` en `/boot`; `modprobe` y `rmmod` |
+| [19](19_volumenes_y_particiones.ipynb) | Particiones y volúmenes de discos reales (`fdisk`, `mount`) |
+| [20](20_gestion_de_servicios_con_systemd.ipynb) | `systemctl status`, `stop` y `start` con *Apache* |
+| [21](21_chroot_y_contenedores.ipynb) | Instalación de `docker.io` con `apt` y `systemctl enable/start docker` |
+| [23](23_sesiones_remotas_y_transmision_de_datos.ipynb) | `ssh.service`, `ssh.socket` y `sshd -t` |
+| [27](27_fechas_horas_y_temporizadores.ipynb) | `timedatectl`, `systemd-timesyncd` y `cron` como servicio |
+| [28](28_seguridad_basica.ipynb) | `ufw` y recarga de `sshd` |
+
+### Comprobación automática de los cuadernos.
+
+El *workflow* `.github/workflows/notebooks.yml` construye el mismo *devcontainer* en *GitHub Actions* y ejecuta con `scripts/ejecutar_cuadernos.py` todos los cuadernos, salvo los de la tabla anterior (listados en `scripts/cuadernos_omitidos.txt`). Las celdas que muestran un error a propósito (por ejemplo, un archivo inexistente o un permiso denegado) llevan la etiqueta `raises-exception`; las que esperan una respuesta del teclado llevan `skip-execution`.
+
+Para ejecutar la misma comprobación dentro del *Codespace*:
+
+``` bash
+python3 scripts/ejecutar_cuadernos.py --omitir scripts/cuadernos_omitidos.txt
+```
 
 ## El kernel de Bash para Jupyter.
 

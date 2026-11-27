@@ -1,0 +1,21 @@
+# Mantiene al día lo que está fijado por versión o por SHA: las actions de los
+# workflows, los paquetes de pip y la imagen base del devcontainer, y sus features.
+# Dependabot abre pull requests; nada se actualiza sin revisión.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: /.devcontainer
+    schedule:
+      interval: monthly
+  - package-ecosystem: docker
+    directory: /.devcontainer
+    schedule:
+      interval: monthly
+  - package-ecosystem: devcontainers
+    directory: /
+    schedule:
+      interval: monthly

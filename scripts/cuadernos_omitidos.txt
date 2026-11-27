@@ -1,0 +1,11 @@
+# Cuadernos que la CI no ejecuta: necesitan un Ubuntu 24.04 completo con
+# systemd como PID 1, discos o servicios del sistema, que un contenedor no
+# ofrece. Se practican en una máquina Ubuntu 24.04 real (véase el README).
+17_proceso_de_arranque.ipynb  # GRUB, /boot, systemctl get-default, journalctl -b
+18_kernel_modulos_y_dispositivos.ipynb  # vmlinuz e initrd en /boot; modprobe y rmmod
+19_volumenes_y_particiones.ipynb  # particiones y volúmenes de discos reales (fdisk, mount)
+20_gestion_de_servicios_con_systemd.ipynb  # systemctl status, stop y start con apache2
+21_chroot_y_contenedores.ipynb  # docker.io con apt y systemctl enable/start docker
+23_sesiones_remotas_y_transmision_de_datos.ipynb  # ssh.service, ssh.socket y sshd -t
+27_fechas_horas_y_temporizadores.ipynb  # timedatectl, systemd-timesyncd y cron como servicio
+28_seguridad_basica.ipynb  # ufw y recarga de sshd

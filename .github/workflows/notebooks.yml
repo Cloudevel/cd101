@@ -1,0 +1,42 @@
+# Ejecuta los cuadernos compatibles con un contenedor dentro del mismo
+# devcontainer que usan los estudiantes (Ubuntu 24.04 con el kernel de Bash).
+# Los cuadernos que necesitan systemd, discos o servicios del sistema están en
+# scripts/cuadernos_omitidos.txt y se practican en un Ubuntu 24.04 real.
+name: Cuadernos
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Versión fija del CLI de Dev Containers (actualizar a mano).
+  DEVCONTAINER_CLI: "@devcontainers/cli@0.91.0"
+
+jobs:
+  cuadernos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Construir y levantar el devcontainer
+        run: npx --yes "${DEVCONTAINER_CLI}" up --workspace-folder .
+
+      - name: Ejecutar los cuadernos
+        run: >-
+          npx --yes "${DEVCONTAINER_CLI}" exec --workspace-folder .
+          python3 scripts/ejecutar_cuadernos.py
+          --omitir scripts/cuadernos_omitidos.txt --timeout 180
