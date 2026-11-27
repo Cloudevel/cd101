@@ -107,3 +107,11 @@ saluda.sh
 
 # VSCode
 .vscode/
+
+# Archivos de práctica del cuaderno 25 (compresión)
+data/
+datos.tar
+datos.tar.*
+datos.zip
+datos_alternos/
+datos_zip/
